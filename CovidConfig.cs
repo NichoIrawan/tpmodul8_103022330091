@@ -37,6 +37,7 @@ namespace tpmodul8_103022330091
             } 
             catch (Exception e)
             {
+                setDefault();
                 WriteNewConfigFile();
             }
         }
@@ -57,6 +58,14 @@ namespace tpmodul8_103022330091
 
             String json = JsonSerializer.Serialize(pasienCovid, options);
             File.WriteAllText("covid_config.json", json);
+        }
+
+        private void setDefault()
+        {
+            pasienCovid.satuan_suhu = "celsius";
+            pasienCovid.batas_hari_demam = 14;
+            pasienCovid.pesan_ditolak = "Anda tidak diperbolehkan masuk ke dalam gedung ini";
+            pasienCovid.pesan_diterima = "Anda dipersilahkan untuk masuk ke dalam gedung ini";
         }
 
         public void ubahSatuan()
