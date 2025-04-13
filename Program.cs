@@ -10,7 +10,7 @@ class main
 
         covidConfig.ubahSatuan();
 
-        Console.WriteLine($"Berapa suhu badan anda saat \r\nini? Dalam nilai {covidConfig.pasienCovid.satuan_suhu}");
+        Console.WriteLine($"Berapa suhu badan anda saat ini? Dalam nilai {covidConfig.pasienCovid.satuan_suhu}");
         String input = Console.ReadLine();
         try
         {
